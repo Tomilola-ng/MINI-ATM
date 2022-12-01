@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./script.js" defer></script>
+   
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+        section {
+            width: 400px;
+            margin: auto 2em;
+            padding: 2em;
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        .btn, button {
+            background-color: midnightblue;
+            color: #ffe;
+            border-radius: 5px;
+            padding: .5em 1em;
+            border: 0;
+        }
+        input {
+            width: 350px;
+            margin-top: 1em;
+        }
+    </style>
+
+    <title> ATM_JS </title>
+</head>
+<body>
+    <section id="password__page" class="active">
+        <h1> Welcome to Tomi Bank Hi, please type in your account details </h1>
+        <label for="username">Input your Username</label>
+        <input type="text" name="username" id="usernameInput">
+        <br>
+        <br>
+        <br>
+        <label for="password">Input your Password</label>
+        <input type="password" name="password" maxlength="4" id="passwordInput">
+        <br>
+        <br>
+        <button id="passwordBtn" class='btn'> Go Now </button>
+    </section>
+
+    <section id="home__page">
+        <h1> Welcome <span id="usernamedisplay"></span> </h1>
+        <p> What will you like to do </p>
+
+        <button class="withdrawPageBtn"> Withdraw </button>
+        <button class="balancePageBtn"> Check Balance </button>
+        <button class="depositPageBtn"> Deposit </button>
+    </section>
+
+    <section id="withdraw__page">
+        <h1>  Please input in how much you want to withdraw  </h1>
+
+        <input type="number" id="withdrawInput"> 
+        <br>
+        <br>
+        <button id="withdrawBtn"> Withdraw </button>
+    </section>
+
+    <section id="balance__page">
+        <h1> You have $<span id="balancedisplay"></span> left </h1>
+        <button class="gohome"> Go Home </button>
+    </section>
+
+    
+    <section id="deposit__page">
+        <h1>  Please input in how much you want to deposit  </h1>
+
+        <input type="number" id="depositInput"> 
+        <br>
+        <br>
+        <button id="depositBtn"> deposit </button>
+    </section>
+</body>
+</html>
